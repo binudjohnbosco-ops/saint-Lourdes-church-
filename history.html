@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Church of Our Lady of Lourdes | Punnai Nagar</title>
+
+    <meta name="description"
+        content="Official website of Church of Our Lady of Lourdes, Punnai Nagar, Nagercoil. Discover our parish, Holy Mass timings, prayers and church information.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #101820;
+            --gold: #d6ad65;
+            --light-gold: #f4dfb0;
+            --cream: #fffaf0;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+        }
+
+        /* NAVBAR */
+
+        .custom-navbar {
+            background: rgba(16, 24, 32, 0.98);
+            padding: 12px 5%;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(214, 173, 101, 0.4);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .navbar-brand img {
+            height: 68px;
+            width: 68px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            padding: 3px;
+        }
+
+        .brand-name {
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link {
+            color: #eee !important;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 9px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--light-gold) !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            border: 1px solid var(--gold);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 65px 20px;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(20, 15, 10, 0.68),
+                    rgba(255, 255, 255, 0.12),
+                    rgba(20, 15, 10, 0.55)),
+                url('./poater.jpg');
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .hero-content {
+            max-width: 950px;
+            animation: appear 1.3s ease;
+        }
+
+        .hero-small {
+            color: #fff0ca;
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(34px, 6vw, 65px);
+            color: white;
+            font-weight: 700;
+            line-height: 1.4;
+            text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 span {
+            color: var(--light-gold);
+        }
+
+        .hero-description {
+            color: white;
+            font-size: 16px;
+            line-height: 2;
+            margin-top: 20px;
+            text-shadow: 1px 2px 5px black;
+        }
+
+        .gold-line {
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+            margin: 24px auto;
+            border-radius: 10px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(135deg, #e5c27f, #b68a43);
+            color: #17130d;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            background: white;
+            color: #17130d;
+        }
+
+        /* COMMON SECTIONS */
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-subtitle {
+            color: #a47a36;
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(27px, 4vw, 40px);
+            margin-top: 15px;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .section-description {
+            max-width: 800px;
+            margin: 20px auto;
+            color: #666;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        /* WELCOME */
+
+        .welcome-section {
+            padding: 85px 20px;
+            text-align: center;
+        }
+
+        /* FEATURE CARDS */
+
+        .features {
+            padding: 75px 7%;
+            background: #f3ead8;
+        }
+
+        .feature-card {
+            background: white;
+            height: 100%;
+            text-align: center;
+            padding: 38px 25px;
+            border-radius: 15px;
+            border: 1px solid #ead9b8;
+            transition: 0.4s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: #a47a36;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.9;
+        }
+
+        /* CHURCH INFORMATION */
+
+        .church-information {
+            padding: 80px 7%;
+            background: var(--cream);
+        }
+
+        .church-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .church-card {
+            background: white;
+            padding: 32px;
+            border-radius: 15px;
+            border: 1px solid #e8d6b2;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .church-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+        }
+
+        .church-card h3 {
+            color: #a47a36;
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            margin-bottom: 22px;
+        }
+
+        .church-card p,
+        .church-card li {
+            font-size: 14px;
+            line-height: 2;
+            color: #555;
+        }
+
+        .church-card strong {
+            color: #172b40;
+        }
+
+        .church-card ul {
+            padding-left: 22px;
+        }
+
+        .church-link {
+            color: #a47a36;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .church-link:hover {
+            color: #172b40;
+            text-decoration: underline;
+        }
+
+        .church-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #172b40;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 8px 5px;
+            transition: 0.3s;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .church-button:hover {
+            background: #c49a53;
+            color: #111;
+        }
+
+        .church-note {
+            background: #f4ead7;
+            padding: 18px;
+            border-left: 4px solid #c49a53;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #66583f;
+            margin-top: 20px;
+        }
+
+        .church-actions {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        /* MAP */
+
+        .map-section {
+            padding: 70px 7%;
+            background: #f3ead8;
+            text-align: center;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* QUOTE */
+
+        .quote-section {
+            padding: 75px 20px;
+            background: var(--navy);
+            text-align: center;
+            color: white;
+        }
+
+        .quote-section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--light-gold);
+            font-size: clamp(23px, 4vw, 35px);
+        }
+
+        .quote-section p {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #ddd;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #080e14;
+            color: #ddd;
+            text-align: center;
+            padding: 40px 15px;
+            border-top: 2px solid var(--gold);
+        }
+
+        footer h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--light-gold);
+            font-size: 22px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin-top: 12px;
+            color: #aaa;
+        }
+
+        .footer-gold {
+            color: var(--gold);
+        }
+
+        /* ANIMATIONS */
+
+        /* ANIMATIONS */
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HISTORY TIMELINE */
+
+        .history-section {
+            padding: 85px 20px;
+            background: var(--cream);
+        }
+
+        .history-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .history-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 55px;
+        }
+
+        .history-intro h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--navy);
+            font-size: clamp(25px, 4vw, 36px);
+            margin-bottom: 20px;
+        }
+
+        .history-intro p {
+            color: #666;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        .history-timeline {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+            padding: 10px 0;
+        }
+
+        .history-timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #d6ad65;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 35px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 28px;
+            border: 1px solid #ead9b8;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.09);
+        }
+
+        .timeline-content h3 {
+            font-family: 'Cinzel', serif;
+            color: #a47a36;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 35px;
+            width: 17px;
+            height: 17px;
+            background: var(--gold);
+            border: 4px solid var(--cream);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -8px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -8px;
+        }
+
+        /* HISTORY SUMMARY */
+
+        .history-summary {
+            max-width: 950px;
+            margin: 60px auto 0;
+            padding: 45px 30px;
+            text-align: center;
+            background: #f3ead8;
+            border: 1px solid #ead9b8;
+            border-radius: 18px;
+        }
+
+        .history-summary .cross {
+            color: #b68a43;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .history-summary h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--navy);
+            font-size: clamp(23px, 4vw, 32px);
+            margin-bottom: 20px;
+        }
+
+        .history-summary p {
+            max-width: 750px;
+            margin: auto;
+            color: #66583f;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 991px) {
+            .custom-navbar {
+                padding: 10px 4%;
+            }
+
+            .navbar-nav {
+                align-items: flex-start;
+                padding: 15px 0;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 7px 0;
+            }
+
+            .hero {
+                min-height: 480px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 450px;
+                padding: 55px 18px;
+            }
+
+            .hero-small {
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .welcome-section,
+            .history-section,
+            .church-information {
+                padding: 60px 18px;
+            }
+
+            .features,
+            .map-section {
+                padding: 60px 18px;
+            }
+
+            .history-timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                width: 100%;
+                left: 0;
+                padding: 15px 10px 15px 38px;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 2px;
+                right: auto;
+            }
+
+            .timeline-content {
+                padding: 23px;
+            }
+
+            .history-summary {
+                padding: 35px 20px;
+            }
+
+            .map-frame {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-brand img {
+                width: 52px;
+                height: 52px;
+            }
+
+            .brand-name {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 400px;
+            }
+
+            .feature-card,
+            .church-card {
+                padding: 25px 18px;
+            }
+
+            .church-button {
+                padding: 11px 18px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="home.html">
+
+                <img src="./thirukudumbam o.jpg" alt="Church of Our Lady of Lourdes Logo">
+
+                <span class="brand-name">
+                    OUR LADY OF LOURDES
+                </span>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#churchNavbar"
+                aria-controls="churchNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="churchNavbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="history.html" aria-current="page">History</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="mass.html">Holy Mass</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.html">Information</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="loc.html">Location</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                Church of Our Lady of Lourdes
+            </p>
+
+            <h1>
+                Our Church <span>History</span>
+            </h1>
+
+            <div class="gold-line"></div>
+
+            <p class="hero-description">
+                Discover the journey of faith, devotion and unity
+                of our parish at Punnai Nagar, Nagercoil.
+            </p>
+
+            <a href="#history" class="hero-btn">
+                Explore Our History
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- HISTORY INTRODUCTION -->
+
+    <section class="history-section" id="history">
+
+        <div class="history-container">
+
+            <div class="history-intro reveal">
+
+                <span class="section-subtitle">
+                    Our Parish Journey
+                </span>
+
+                <h2>
+                    A Journey Through Time
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    The Church of Our Lady of Lourdes in Punnai Nagar,
+                    Nagercoil, began with a small prayer cell and a
+                    tile-roofed church built by local villagers in 1946,
+                    eventually growing into an independent parish
+                    within the Diocese of Kottar.
+                </p>
+
+                <p>
+                    From a humble prayer shed to an independent parish,
+                    the history of Our Lady of Lourdes Church reflects
+                    generations of faith, devotion and community unity.
+                </p>
+
+            </div>
+
+
+            <!-- TIMELINE -->
+
+            <div class="history-timeline">
+
+                <div class="timeline-item reveal">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-content">
+
+                        <h3>1946 – The Beginning</h3>
+
+                        <p>
+                            The parish journey began with a small prayer
+                            cell and a tile-roofed church built through
+                            the efforts of local villagers.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-content">
+
+                        <h3>A Growing Community</h3>
+
+                        <p>
+                            The church became a place where families
+                            gathered for prayer, worship and spiritual
+                            fellowship.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-content">
+
+                        <h3>Parish Development</h3>
+
+                        <p>
+                            Through the faith and dedication of the
+                            community, the church continued to grow
+                            as an important spiritual centre.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-content">
+
+                        <h3>Independent Parish</h3>
+
+                        <p>
+                            The church eventually grew into an
+                            independent parish within the Diocese
+                            of Kottar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HISTORY SUMMARY -->
+
+            <div class="history-summary reveal">
+
+                <div class="cross">✝</div>
+
+                <h2>
+                    A Legacy of Faith, Love & Unity
+                </h2>
+
+                <p>
+                    From a humble prayer shed to an independent parish,
+                    the history of Our Lady of Lourdes Church,
+                    Punnai Nagar, reflects generations of faith,
+                    devotion and unity. May our parish continue to
+                    grow in love, prayer and service.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURE CARDS -->
+
+    <section class="features">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span class="section-subtitle">
+                    Our Parish
+                </span>
+
+                <h2 class="section-title">
+                    Faith & Community
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p class="section-description">
+                    Our church is a place of prayer, worship,
+                    fellowship and spiritual growth.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon">✝</div>
+
+                        <h3>Faith</h3>
+
+                        <p>
+                            Growing together through prayer,
+                            devotion and trust in God.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon">🙏</div>
+
+                        <h3>Prayer</h3>
+
+                        <p>
+                            Gathering as a community to celebrate
+                            our faith and seek God's blessings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="feature-card reveal">
+
+                        <div class="feature-icon">❤️</div>
+
+                        <h3>Unity</h3>
+
+                        <p>
+                            Building a loving community through
+                            fellowship, care and service.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUOTE SECTION -->
+
+    <section class="quote-section">
+
+        <div class="container reveal">
+
+            <h2>
+                A House of Prayer, Faith & Hope
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p>
+                May Our Lady of Lourdes guide our parish
+                and bless every family with peace and love.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CHURCH INFORMATION -->
+
+    <section class="church-information">
+
+        <div class="church-container">
+
+            <div class="section-heading reveal">
+
+                <span class="section-subtitle">
+                    Visit Our Parish
+                </span>
+
+                <h2 class="section-title">
+                    Church Information
+                </h2>
+
+                <div class="gold-line"></div>
+
+            </div>
+
+
+            <div class="church-card reveal">
+
+                <h3>
+                    Church of Our Lady of Lourdes
+                </h3>
+
+                <p>
+                    <strong>Location:</strong>
+                    Punnai Nagar, Nagercoil, Tamil Nadu, India.
+                </p>
+
+                <p>
+                    <strong>Diocese:</strong>
+                    Diocese of Kottar.
+                </p>
+
+                <p>
+                    <strong>Patroness:</strong>
+                    Our Lady of Lourdes.
+                </p>
+
+                <p>
+                    We welcome everyone to join our parish community
+                    in prayer and worship.
+                </p>
+
+                <div class="church-note">
+                    For the latest Holy Mass timings and parish
+                    announcements, please refer to the church's
+                    official information page.
+                </div>
+
+            </div>
+
+
+            <div class="church-actions reveal">
+
+                <a href="mass.html" class="church-button">
+                    Holy Mass Timings
+                </a>
+
+                <a href="info.html" class="church-button">
+                    More Information
+                </a>
+
+                <a href="loc.html" class="church-button">
+                    Find Our Church
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAP SECTION -->
+
+    <section class="map-section">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span class="section-subtitle">
+                    Find Us
+                </span>
+
+                <h2 class="section-title">
+                    Our Church Location
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p class="section-description">
+                    Visit the Church of Our Lady of Lourdes,
+                    Punnai Nagar, Nagercoil.
+                </p>
+
+            </div>
+
+            <iframe class="map-frame reveal"
+                src="https://www.google.com/maps?q=Church%20of%20Our%20Lady%20of%20Lourdes%20Punnai%20Nagar%20Nagercoil&output=embed"
+                title="Church of Our Lady of Lourdes location map" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <h3>
+                Church of Our Lady of Lourdes
+            </h3>
+
+            <p>
+                Punnai Nagar, Nagercoil, Tamil Nadu, India.
+            </p>
+
+            <p>
+                A parish united in faith, prayer and love.
+            </p>
+
+            <p>
+                © <span id="currentYear"></span>
+                Church of Our Lady of Lourdes.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Designed with <span class="footer-gold">♥</span>
+                for our parish community.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- CUSTOM JAVASCRIPT -->
+
+    <script>
+
+        // SCROLL REVEAL ANIMATION
+
+        const revealObserver = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                    revealObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.12
+        });
+
+
+        document.querySelectorAll(".reveal").forEach(element => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+        // AUTOMATIC FOOTER YEAR
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+
+        // CLOSE MOBILE NAVBAR AFTER CLICKING A LINK
+
+        const navbarLinks = document.querySelectorAll(
+            ".navbar-collapse .nav-link"
+        );
+
+        const navbarMenu = document.getElementById("churchNavbar");
+
+        navbarLinks.forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                if (window.innerWidth < 992) {
+
+                    const collapse = bootstrap.Collapse.getInstance(navbarMenu);
+
+                    if (collapse) {
+                        collapse.hide();
+                    }
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
