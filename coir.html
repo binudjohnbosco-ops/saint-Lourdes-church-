@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choir Group | St. Lourdes Mary Church</title>
+
+    <meta name="description" content="Learn about the Choir Group of St. Lourdes Mary Church, Punnai Nagar, Nagercoil.">
+
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* ROOT VARIABLES */
+
+        :root {
+            --navy: #101820;
+            --gold: #d6ad65;
+            --light-gold: #f4dfb0;
+            --cream: #fffaf0;
+            --ivory: #f8f3e8;
+            --white: #ffffff;
+            --text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+        }
+
+        /* NAVBAR */
+
+        .custom-navbar {
+            background: rgba(16, 24, 32, 0.98);
+            padding: 12px 5%;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(214, 173, 101, 0.4);
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            text-decoration: none;
+        }
+
+        .navbar-brand img {
+            height: 68px;
+            width: 68px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            padding: 3px;
+        }
+
+        .brand-name {
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link {
+            color: #eee !important;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 9px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--light-gold) !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            border: 1px solid var(--gold);
+            box-shadow: none !important;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(214, 173, 101, 0.2) !important;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 570px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 65px 20px;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        /* BACKGROUND VIDEO */
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        /* VIDEO OVERLAY */
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                    rgba(20, 15, 10, 0.68),
+                    rgba(255, 255, 255, 0.12),
+                    rgba(20, 15, 10, 0.55));
+            z-index: -1;
+        }
+
+        /* HERO CONTENT */
+
+        .hero-content {
+            position: relative;
+            max-width: 950px;
+            width: 100%;
+            color: white;
+            animation: appear 1.3s ease;
+        }
+
+        .hero-small {
+            color: #fff0ca;
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(34px, 6vw, 65px);
+            color: white;
+            font-weight: 700;
+            line-height: 1.4;
+            text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 span {
+            color: var(--light-gold);
+        }
+
+        .hero-description {
+            color: white;
+            font-size: 16px;
+            line-height: 2;
+            margin-top: 20px;
+            text-shadow: 1px 2px 5px black;
+        }
+
+        .gold-line {
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+            margin: 24px auto;
+            border-radius: 10px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(135deg, #e5c27f, #b68a43);
+            color: #17130d;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            background: white;
+            color: #17130d;
+        }
+
+        /* COMMON SECTION HEADINGS */
+
+        .section-heading {
+            text-align: center;
+            padding: 45px 15px;
+            margin-bottom: 40px;
+            animation: headingReveal 1.3s ease-out both;
+        }
+
+        .section-subtitle {
+            color: #a47a36;
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(27px, 4vw, 40px);
+            margin-top: 15px;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .section-description {
+            max-width: 800px;
+            margin: 20px auto;
+            color: #666;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        /* FEATURE CARDS */
+
+        .features {
+            padding: 75px 7%;
+            background: #f3ead8;
+        }
+
+        .feature-card {
+            background: white;
+            height: 100%;
+            text-align: center;
+            padding: 38px 25px;
+            border-radius: 15px;
+            border: 1px solid #ead9b8;
+            transition: 0.4s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: #a47a36;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.9;
+        }
+
+        /* CHURCH INFORMATION */
+
+        .church-information {
+            padding: 80px 7%;
+            background: var(--cream);
+        }
+
+        .church-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .church-card {
+            background: white;
+            padding: 32px;
+            border-radius: 15px;
+            border: 1px solid #e8d6b2;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .church-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+        }
+
+        .church-card h3 {
+            color: #a47a36;
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            margin-bottom: 22px;
+        }
+
+        .church-card p,
+        .church-card li {
+            font-size: 14px;
+            line-height: 2;
+            color: #555;
+        }
+
+        .church-card strong {
+            color: #172b40;
+        }
+
+        .church-card ul {
+            padding-left: 22px;
+        }
+
+        .church-link {
+            color: #a47a36;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .church-link:hover {
+            color: #172b40;
+            text-decoration: underline;
+        }
+
+        .church-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #172b40;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 8px 5px;
+            transition: 0.3s;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .church-button:hover {
+            background: #c49a53;
+            color: #111;
+        }
+
+        .church-note {
+            background: #f4ead7;
+            padding: 18px;
+            border-left: 4px solid #c49a53;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #66583f;
+            margin-top: 20px;
+        }
+
+        .church-actions {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        /* MAP */
+
+        .map-section {
+            padding: 70px 7%;
+            background: #f3ead8;
+            text-align: center;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* QUOTE */
+
+        .quote-section {
+            padding: 75px 20px;
+            background: var(--navy);
+            text-align: center;
+            color: white;
+        }
+
+        .quote-section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--light-gold);
+            font-size: clamp(23px, 4vw, 35px);
+        }
+
+        .quote-section p {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #ddd;
+        }
+
+        /* MAIN BANNER */
+
+        .banner {
+            position: relative;
+            width: 100%;
+            min-height: 430px;
+            background-image: url("./church bg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                    rgba(5, 12, 25, 0.78),
+                    rgba(15, 20, 35, 0.38),
+                    rgba(5, 12, 25, 0.78));
+            z-index: -1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 35px 20px;
+            color: white;
+            animation: bannerReveal 1.4s ease forwards;
+        }
+
+        .logo-frame {
+            width: 145px;
+            height: 145px;
+            margin: 0 auto 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 215, 130, 0.9);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.13);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 25px rgba(255, 200, 100, 0.35);
+            animation: logoFloat 4s ease-in-out infinite;
+        }
+
+        .front-img {
+            width: 115px;
+            height: 115px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .banner h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(25px, 4vw, 45px);
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 0 0 12px;
+            color: #fff4d6;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .banner p {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #ffda91;
+            font-weight: 600;
+        }
+
+        .banner-subtitle {
+            font-family: Georgia, serif;
+            font-size: 17px;
+            font-style: italic;
+            color: #fff5df;
+            letter-spacing: 1px;
+        }
+
+        .banner-shine {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(110deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.12),
+                    transparent);
+            transform: skewX(-20deg);
+            animation: shine 7s infinite;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #080e14;
+            color: #ddd;
+            text-align: center;
+            padding: 40px 15px;
+            border-top: 2px solid var(--gold);
+        }
+
+        footer h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--light-gold);
+            font-size: 22px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin-top: 12px;
+            color: #aaa;
+        }
+
+        .footer-gold {
+            color: var(--gold);
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes headingReveal {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+                filter: blur(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes bannerReveal {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes logoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+
+            40%,
+            100% {
+                left: 150%;
+            }
+        }
+
+        /* SCROLL REVEAL */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 991px) {
+            .custom-navbar {
+                padding: 10px 4%;
+            }
+
+            .navbar-brand img {
+                height: 55px;
+                width: 55px;
+            }
+
+            .brand-name {
+                font-size: 13px;
+            }
+
+            .navbar-nav {
+                align-items: flex-start;
+                padding: 15px 0;
+            }
+
+            .hero {
+                min-height: 480px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 450px;
+                padding: 40px 12px;
+            }
+
+            .hero-small {
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .welcome-section,
+            .church-information {
+                padding: 55px 18px;
+            }
+
+            .church-card {
+                padding: 22px;
+            }
+
+            .map-frame {
+                height: 300px;
+            }
+
+            .banner {
+                min-height: 350px;
+                background-position: center;
+            }
+
+            .logo-frame {
+                width: 115px;
+                height: 115px;
+            }
+
+            .front-img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .banner h1 {
+                font-size: 25px;
+                letter-spacing: 1px;
+            }
+
+            .banner p {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .banner-subtitle {
+                font-size: 14px;
+            }
+
+            .section-heading {
+                padding: 30px 12px;
+            }
+
+            .section-subtitle {
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+
+            .section-description {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .brand-name {
+                font-size: 11px;
+                letter-spacing: 0.5px;
+            }
+
+            .navbar-brand img {
+                height: 45px;
+                width: 45px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* CHOIR SECTION */
+
+        .choir-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg,
+                    #fffaf0,
+                    #f4ead7,
+                    #fffdf8);
+            overflow: hidden;
+        }
+
+        /* SECTION HEADING */
+
+        .choir-section .section-heading {
+            margin-bottom: 55px;
+        }
+
+        .choir-section .section-tag {
+            color: #b18a45;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .choir-section .section-heading h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(28px, 4vw, 42px);
+            color: #101820;
+            margin: 15px 0;
+            font-weight: 700;
+        }
+
+        .choir-section .section-heading p {
+            color: #777;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* CHOIR CARD */
+
+        .choir-card {
+            background: #ffffff;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(182, 143, 72, 0.25);
+            box-shadow: 0 10px 30px rgba(16, 24, 32, 0.08);
+            transition: all 0.5s ease;
+            animation: choirAppear 0.8s ease both;
+        }
+
+        .choir-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 45px rgba(16, 24, 32, 0.16);
+            border-color: #c6a15d;
+        }
+
+        /* MEMBER IMAGE */
+
+        .choir-image {
+            height: 290px;
+            position: relative;
+            overflow: hidden;
+            background: #eee5d5;
+        }
+
+        .choir-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .choir-card:hover .choir-image img {
+            transform: scale(1.1);
+        }
+
+        /* IMAGE OVERLAY */
+
+        .choir-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    rgba(16, 24, 32, 0.75),
+                    transparent 65%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: 0.4s ease;
+        }
+
+        .choir-card:hover .choir-overlay {
+            opacity: 1;
+        }
+
+        .choir-overlay span {
+            color: #f4dfb0;
+            font-size: 38px;
+            transform: translateY(20px);
+            transition: 0.4s ease;
+        }
+
+        .choir-card:hover .choir-overlay span {
+            transform: translateY(0);
+        }
+
+        /* MEMBER DETAILS */
+
+        .choir-info {
+            padding: 23px 12px;
+            text-align: center;
+        }
+
+        .choir-info h4 {
+            color: #101820;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .choir-info p {
+            color: #b18a45;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* ENTRANCE ANIMATION */
+
+        @keyframes choirAppear {
+            from {
+                opacity: 0;
+                transform: translateY(45px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 576px) {
+            .choir-section {
+                padding: 65px 0;
+            }
+
+            .choir-image {
+                height: 320px;
+            }
+
+            .choir-section .section-heading {
+                margin-bottom: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="home.html">
+                <img src="./og_logo-removebg-preview.png" alt="Church Logo">
+                <span class="brand-name">ST. LOURDES MARY CHURCH</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="mass.html">Holy Mass</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.html">Information</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="anbiam.html">Anbiam</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="pg.html">Photo Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="coir.html">Choir Group</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="loc.html">Location</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <img class="hero-video" autoplay muted loop playsinline preload="auto" src="./poater.jpg" alt="">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                Welcome to Our Parish
+            </p>
+
+            <h1>
+                St. Lourdes <span>Mary Church</span>
+            </h1>
+
+            <div class="gold-line"></div>
+
+            <p class="hero-description">
+                Our Lady of Lourdes Church, Punnai Nagar, Nagercoil.
+                A place of faith, prayer, love and devotion.
+            </p>
+
+            <a href="history.html" class="hero-btn">
+                Discover Our Church
+            </a>
+
+        </div>
+
+    </section>
+    <!-- CHOIR MEMBERS SECTION -->
+    <section class="choir-section" id="choir">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-tag">OUR CHURCH FAMILY</span>
+                <h2>Meet Our Choir Members</h2>
+                <p>
+                    United in faith and harmony, our choir members serve the Lord
+                    through music, prayer and praise.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- MEMBER 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="choir-card">
+                        <div class="choir-image">
+                            <img src="images/choir1.jpg" alt="Choir Member">
+                            <div class="choir-overlay">
+                                <span>♪</span>
+                            </div>
+                        </div>
+                        <div class="choir-info">
+                            <h4>Member Name</h4>
+                            <p>Choir Leader</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEMBER 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="choir-card">
+                        <div class="choir-image">
+                            <img src="images/choir2.jpg" alt="Choir Member">
+                            <div class="choir-overlay">
+                                <span>♪</span>
+                            </div>
+                        </div>
+                        <div class="choir-info">
+                            <h4>Member Name</h4>
+                            <p>Lead Singer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEMBER 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="choir-card">
+                        <div class="choir-image">
+                            <img src="images/choir3.jpg" alt="Choir Member">
+                            <div class="choir-overlay">
+                                <span>♪</span>
+                            </div>
+                        </div>
+                        <div class="choir-info">
+                            <h4>Member Name</h4>
+                            <p>Keyboard Player</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEMBER 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="choir-card">
+                        <div class="choir-image">
+                            <img src="images/choir4.jpg" alt="Choir Member">
+                            <div class="choir-overlay">
+                                <span>♪</span>
+                            </div>
+                        </div>
+                        <div class="choir-info">
+                            <h4>Member Name</h4>
+                            <p>Choir Member</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCROLL REVEAL -->
+
+    <script>
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        document.querySelectorAll(".reveal").forEach(element => {
+            revealObserver.observe(element);
+        });
+    </script>
+
+</body>
+
+</html>
