@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parish Organisations | Our Lady of Lourdes Church</title>
+
+    <meta name="description"
+        content="2026 Parish Organisations Meeting Schedule of Our Lady of Lourdes Church, Punnai Nagar.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #101820;
+            --navy-light: #1b2b39;
+            --gold: #d6ad65;
+            --gold-dark: #a47a36;
+            --gold-light: #f4dfb0;
+            --cream: #fffaf0;
+            --ivory: #fffdf8;
+            --text: #35332e;
+            --muted: #82745e;
+            --border: #e9dfcb;
+            --white: #ffffff;
+            --green: #397a59;
+            --shadow: 0 12px 35px rgba(16, 24, 32, 0.07);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+
+        .custom-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(16, 24, 32, 0.97);
+            backdrop-filter: blur(15px);
+            padding: 10px 5%;
+            border-bottom: 1px solid rgba(214, 173, 101, 0.45);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .navbar-brand img {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            padding: 3px;
+        }
+
+        .brand-name {
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #eee;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold-light);
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            border-radius: 7px;
+            font-size: 24px;
+            width: 42px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            min-height: 340px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 65px 20px;
+            overflow: hidden;
+
+            background:
+                linear-gradient(120deg,
+                    rgba(9, 17, 24, 0.95),
+                    rgba(16, 24, 32, 0.86),
+                    rgba(69, 49, 21, 0.82));
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border: 1px solid rgba(214, 173, 101, 0.18);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::before {
+            width: 450px;
+            height: 450px;
+            top: -280px;
+            left: -100px;
+        }
+
+        .hero::after {
+            width: 550px;
+            height: 550px;
+            right: -150px;
+            bottom: -390px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: heroAppear 1.1s ease both;
+        }
+
+        .hero-symbol {
+            color: var(--gold);
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .hero-label {
+            color: var(--gold);
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(25px, 4vw, 42px);
+            line-height: 1.5;
+            margin: 12px 0;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero-description {
+            color: #ddd3c1;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .hero-line {
+            width: 90px;
+            height: 3px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    var(--gold),
+                    transparent);
+            margin: 20px auto;
+        }
+
+        /* MAIN CONTAINER */
+
+        .schedule-section {
+            padding: 65px 5% 80px;
+        }
+
+        .schedule-container {
+            max-width: 1350px;
+            margin: auto;
+        }
+
+        /* SECTION HEADING */
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading .eyebrow {
+            font-family: 'Poppins', sans-serif;
+            color: var(--gold-dark);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(23px, 3vw, 32px);
+            color: var(--navy);
+            margin: 10px 0;
+            font-weight: 800;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        /* STATISTICS */
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            position: relative;
+            padding: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: 0.35s;
+        }
+
+        .stat-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(90deg,
+                    var(--gold-dark),
+                    var(--gold-light));
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(16, 24, 32, 0.12);
+        }
+
+        .stat-card small {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .stat-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--navy);
+            font-size: 29px;
+            margin-top: 7px;
+        }
+
+        .stat-card .stat-icon {
+            float: right;
+            font-size: 23px;
+            color: var(--gold-dark);
+        }
+
+        /* TOOLBAR */
+
+        .schedule-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 18px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 13px 13px 0 0;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 220px;
+            max-width: 380px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px 12px 42px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+            background: #fffdf8;
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--gold-dark);
+            box-shadow: 0 0 0 3px rgba(214, 173, 101, 0.13);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-dark);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            border: 1px solid var(--border);
+            background: white;
+            color: #65583f;
+            padding: 9px 15px;
+            border-radius: 7px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--navy);
+            color: var(--gold-light);
+            border-color: var(--navy);
+        }
+
+        /* TABLE */
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: white;
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 13px 13px;
+            box-shadow: var(--shadow);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+        }
+
+        .schedule-table thead {
+            background: var(--navy);
+            color: white;
+        }
+
+        .schedule-table th {
+            padding: 16px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: left;
+            white-space: nowrap;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .schedule-table th:first-child,
+        .schedule-table td:first-child {
+            text-align: center;
+            width: 65px;
+        }
+
+        .schedule-table tbody tr {
+            border-bottom: 1px solid #f0eadf;
+            transition: background 0.25s;
+        }
+
+        .schedule-table tbody tr:hover {
+            background: #fff9eb;
+        }
+
+        .schedule-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-table td {
+            padding: 13px 12px;
+            font-size: 12px;
+            line-height: 1.8;
+            vertical-align: middle;
+        }
+
+        .schedule-table td:first-child {
+            color: var(--gold-dark);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .organisation-name {
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .day-badge {
+            display: inline-block;
+            background: #f5eddb;
+            color: #765c2c;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .time-text {
+            color: #705b36;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .location-text {
+            color: #756b59;
+        }
+
+        .future-badge {
+            display: inline-block;
+            background: #eaf3ed;
+            color: var(--green);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .group-row td {
+            background: #faf5e9;
+        }
+
+        .group-row .organisation-name {
+            color: var(--gold-dark);
+        }
+
+        .empty-message {
+            display: none;
+            padding: 40px 15px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* TABLE FOOTNOTE */
+
+        .schedule-note {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 17px 20px;
+            margin-top: 22px;
+            border-left: 3px solid var(--gold);
+            border-radius: 7px;
+            background: #f5eddb;
+            color: #75654b;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .schedule-note span {
+            font-size: 19px;
+        }
+
+        /* PRIEST SIGNATURE */
+
+        .approval-section {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 45px;
+        }
+
+        .approval-card {
+            min-width: 260px;
+            text-align: center;
+            padding: 22px 30px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        .approval-cross {
+            font-size: 25px;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+        }
+
+        .approval-card h3 {
+            font-size: 15px;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .approval-card p {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        .approval-date {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 5px 12px;
+            background: #f5eddb;
+            border-radius: 5px;
+            color: var(--gold-dark);
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            background: var(--navy);
+            color: #ddd;
+            text-align: center;
+            padding: 35px 15px;
+            border-top: 2px solid var(--gold);
+        }
+
+        .site-footer h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 17px;
+        }
+
+        .site-footer p {
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+
+        .footer-gold {
+            color: var(--gold);
+        }
+
+        /* REVEAL ANIMATION */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes heroAppear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1050px) {
+            .nav-links {
+                gap: 13px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-inner {
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                padding: 12px 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 11px 5px;
+                font-size: 13px;
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .stats-grid {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .custom-navbar {
+                padding: 9px 4%;
+            }
+
+            .navbar-brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .brand-name {
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 290px;
+                padding: 45px 15px;
+            }
+
+            .hero-label {
+                letter-spacing: 3px;
+                font-size: 9px;
+            }
+
+            .hero-description {
+                font-size: 11px;
+            }
+
+            .schedule-section {
+                padding: 45px 4% 55px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card {
+                padding: 15px 18px;
+            }
+
+            .stat-card h3 {
+                font-size: 24px;
+            }
+
+            .schedule-toolbar {
+                align-items: stretch;
+                padding: 13px;
+            }
+
+            .search-box {
+                max-width: none;
+                min-width: 100%;
+            }
+
+            .filter-group {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filter-btn {
+                padding: 10px 5px;
+            }
+
+            .approval-section {
+                justify-content: center;
+            }
+
+            .approval-card {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="custom-navbar">
+
+        <div class="nav-inner">
+
+            <a href="home.html" class="navbar-brand">
+
+                <img src="./og_logo-removebg-preview.png" alt="Church Logo">
+
+                <span class="brand-name">
+                    ST. LOURDES MARY CHURCH
+                </span>
+
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="home.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="mass.html">Holy Mass</a></li>
+                <li><a href="info.html">Information</a></li>
+                <li><a href="anbiam.html">Anbiam</a></li>
+                <li><a href="pg.html">Photo Gallery</a></li>
+                <li><a href="coir.html">Choir Group</a></li>
+                <li><a href="loc.html">Location</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-symbol">✝</div>
+
+            <div class="hero-label">
+                PUNNAI NAGAR • 2026
+            </div>
+
+            <h1>
+                Our Lady of Lourdes<br>
+                <span>Church of Punnai Nagar</span>
+            </h1>
+
+            <div class="hero-line"></div>
+
+            <p class="hero-description">
+                Parish Organisations – Weekly Meeting Days, Times and Venues
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- SCHEDULE SECTION -->
+
+    <main class="schedule-section">
+
+        <div class="schedule-container">
+
+            <div class="section-heading reveal">
+
+                <span class="eyebrow">PARISH ORGANISATIONS</span>
+
+                <h2>Organisation Meeting Schedule</h2>
+
+                <p>
+                    Details of the meeting days, times and venues
+                    of the various parish organisations
+                </p>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+
+            <div class="stats-grid reveal">
+
+                <div class="stat-card">
+                    <span class="stat-icon">✝</span>
+                    <small>Total Number of Entries</small>
+                    <h3>58</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">◷</span>
+                    <small>2026 Meeting Schedule</small>
+                    <h3>2026</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">✦</span>
+                    <small>Organisations Starting in 2027</small>
+                    <h3>16</h3>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH AND FILTER -->
+
+            <div class="schedule-toolbar reveal">
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input type="search" id="searchInput" placeholder="Search for an organisation..."
+                        aria-label="Search organisations">
+
+                </div>
+
+                <div class="filter-group">
+
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="2026">
+                        2026
+                    </button>
+
+                    <button class="filter-btn" data-filter="2027">
+                        From 2027
+                    </button>
+
+                    <button class="filter-btn" data-filter="anbiam">
+                        Anbiam
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="table-wrapper reveal">
+
+                <table class="schedule-table">
+
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Organisation Details</th>
+                            <th>Week</th>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Meeting Venue</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="scheduleBody">
+
+                    </tbody>
+
+                </table>
+
+                <div class="empty-message" id="emptyMessage">
+                    No matching information found.
+                </div>
+
+            </div>
+
+
+            <!-- NOTE -->
+
+            <div class="schedule-note reveal">
+
+                <span>ⓘ</span>
+
+                <p>
+                    Organisations starting from 2027 are separately
+                    marked in the schedule. For further information
+                    regarding meeting times and venues, please contact
+                    the Parish Office.
+                </p>
+
+            </div>
+
+
+            <!-- APPROVAL -->
+
+            <div class="approval-section reveal">
+
+                <div class="approval-card">
+
+                    <div class="approval-cross">✝</div>
+
+                    <h3>Parish Priest</h3>
+
+                    <p>Fr.Dr.P. Devadhas</p>
+
+                    <span class="approval-date">
+                        29.09.2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+     MASS & SACRAMENT DETAILS – 2026
+     OUR LADY OF LOURDES CHURCH
+========================================== -->
+
+    <section class="mass-schedule-section">
+
+        <div class="mass-header">
+            <span class="mass-subtitle">PUNNAI NAGAR</span>
+
+            <h1>Our Lady of Lourdes Church</h1>
+
+            <p class="mass-tagline">The Smiling Queen – Our Blessed Mother of Lourdes</p>
+
+            <h2>Mass & Sacramental Details</h2>
+
+            <span class="year-badge">2026</span>
+        </div>
+
+
+        <!-- HOLY MASS -->
+
+        <div class="schedule-heading">
+            <h2>Holy Mass Schedule</h2>
+            <p>Weekly Prayer and Eucharistic Celebrations</p>
+        </div>
+
+        <div class="mass-grid">
+
+            <div class="mass-card">
+                <h3>Monday</h3>
+                <p><strong>Rosary:</strong> 5:15 AM</p>
+                <p><strong>Holy Mass:</strong> 6:00 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Tuesday</h3>
+                <p><strong>Rosary:</strong> 5:15 AM</p>
+                <p><strong>Holy Mass:</strong> 6:00 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Wednesday</h3>
+                <p><strong>Rosary:</strong> 5:15 AM</p>
+                <p><strong>Holy Mass:</strong> 6:00 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Thursday</h3>
+                <p><strong>Rosary:</strong> 5:15 AM</p>
+                <p><strong>Holy Mass:</strong> 6:00 AM</p>
+                <p><strong>Evening:</strong> Rosary</p>
+                <p><strong>Special:</strong> Novena at the Wayside Shrine</p>
+            </div>
+
+            <div class="mass-card special-card">
+                <h3>Friday – Novena</h3>
+                <p><strong>Rosary:</strong> 5:45 PM</p>
+                <p><strong>Holy Mass:</strong> 6:15 PM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Saturday</h3>
+                <p><strong>Rosary:</strong> 5:15 AM</p>
+                <p><strong>Holy Mass:</strong> 6:00 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Sunday</h3>
+                <p><strong>Rosary:</strong> 5:15 AM</p>
+                <p><strong>Holy Mass:</strong> 6:00 AM</p>
+            </div>
+
+        </div>
+
+
+        <!-- SUNDAY ADDITIONAL MASSES -->
+
+        <div class="schedule-heading">
+            <h2>Additional Sunday Masses</h2>
+        </div>
+
+        <div class="mass-grid">
+
+            <div class="mass-card highlight-card">
+                <h3>English Holy Mass</h3>
+                <p><strong>Time:</strong> 11:00 AM</p>
+            </div>
+
+            <div class="mass-card highlight-card">
+                <h3>Evening Holy Mass</h3>
+                <p><strong>Time:</strong> 5:00 PM</p>
+            </div>
+
+        </div>
+
+
+        <!-- SACRAMENTS -->
+
+        <div class="schedule-heading">
+            <h2>Sacraments</h2>
+            <p>Celebrating God's Grace Through the Sacraments</p>
+        </div>
+
+        <div class="mass-grid">
+
+            <div class="mass-card">
+                <h3>Holy Baptism</h3>
+                <p><strong>Day:</strong> Every Sunday</p>
+                <p><strong>Time:</strong> 7:20 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>First Holy Communion</h3>
+                <p><strong>Day:</strong> Second Sundays</p>
+                <p><strong>Celebration:</strong> During English Holy Mass</p>
+                <p><strong>Time:</strong> 11:00 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Sacrament of Reconciliation</h3>
+                <p><strong>Availability:</strong> Every day</p>
+                <p>Before and after Holy Mass.</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Eucharistic Benediction</h3>
+                <p><strong>Day:</strong> Every Tuesday</p>
+                <p>Before Holy Mass.</p>
+            </div>
+
+        </div>
+
+
+        <!-- SPECIAL DEVOTIONS -->
+
+        <div class="schedule-heading">
+            <h2>Special Devotions</h2>
+        </div>
+
+        <div class="mass-grid">
+
+            <div class="mass-card">
+                <h3>First Friday Devotion</h3>
+                <p>Holy Communion during Holy Mass.</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Special Rosary</h3>
+                <p><strong>Time:</strong> 5:45 PM</p>
+                <p><strong>Location:</strong> Around the Church</p>
+            </div>
+
+        </div>
+
+
+        <!-- PARISH ACTIVITIES -->
+
+        <div class="schedule-heading">
+            <h2>Parish Activities</h2>
+            <p>Faith Formation and Spiritual Growth</p>
+        </div>
+
+        <div class="mass-grid">
+
+            <div class="mass-card">
+                <h3>Gospel Meeting</h3>
+                <p><strong>Days:</strong> 2nd and 4th Saturdays</p>
+                <p><strong>Time:</strong> 9:30 AM – 1:00 PM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Catechism Classes</h3>
+                <p><strong>Day:</strong> Every Sunday</p>
+                <p><strong>Time:</strong> 9:45 AM – 10:45 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Children's Activities</h3>
+                <p><strong>Day:</strong> Every Sunday</p>
+                <p><strong>Time:</strong> 8:45 AM – 9:45 AM</p>
+            </div>
+
+        </div>
+
+
+        <!-- CARE FOR THE SICK -->
+
+        <div class="schedule-heading">
+            <h2>Pastoral Care</h2>
+        </div>
+
+        <div class="mass-grid">
+
+            <div class="mass-card">
+                <h3>Holy Communion for the Sick and Elderly</h3>
+                <p><strong>Day:</strong> First Friday</p>
+                <p><strong>Time:</strong> 7:00 AM – 8:30 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Confession</h3>
+                <p>Available whenever requested.</p>
+            </div>
+
+        </div>
+
+
+        <!-- HYMNS -->
+
+        <div class="schedule-heading">
+            <h2>Church Hymns</h2>
+        </div>
+
+        <div class="mass-card full-card">
+            <h3>Common Hymn Book</h3>
+            <p>The Common Hymn Book will be used for church celebrations.</p>
+        </div>
+
+
+        <!-- SPECIAL ANNUAL CELEBRATIONS -->
+
+        <div class="schedule-heading">
+            <h2>Special Annual Celebrations</h2>
+            <p>First Holy Communion – Special Occasions</p>
+        </div>
+
+        <div class="mass-grid">
+
+            <div class="mass-card">
+                <h3>9th Day of the Annual Feast</h3>
+                <p><strong>Holy Mass:</strong> 6:00 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Corpus Christi Feast</h3>
+                <p><strong>Holy Mass:</strong> 11:00 AM</p>
+            </div>
+
+            <div class="mass-card">
+                <h3>Holy Family Feast</h3>
+                <p><strong>Holy Mass:</strong> 11:00 AM</p>
+            </div>
+
+        </div>
+
+
+        <!-- ONLINE MASS -->
+
+        <div class="online-mass-banner">
+            <span>ONLINE WORSHIP</span>
+            <h2>Online Daily Mass Service</h2>
+            <p>Online daily Mass service will be available shortly.</p>
+        </div>
+
+    </section>
+
+
+    <style>
+        /* ROOT VARIABLES */
+
+        .mass-schedule-section {
+            --navy: #101820;
+            --gold: #d6ad65;
+            --light-gold: #f4dfb0;
+            --cream: #fffaf0;
+            --text: #333;
+            --muted: #82745e;
+            --border: #e8dcc0;
+
+            padding: 55px 6%;
+            background: var(--cream);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        /* HEADER */
+
+        .mass-header {
+            text-align: center;
+            padding: 45px 20px;
+            background: linear-gradient(135deg, #101820, #263b4a);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 55px;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .mass-subtitle {
+            color: var(--gold);
+            letter-spacing: 5px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .mass-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(25px, 4vw, 42px);
+            margin: 15px 0;
+            color: var(--light-gold);
+        }
+
+        .mass-tagline {
+            font-style: italic;
+            color: #eee0c5;
+        }
+
+        .mass-header h2 {
+            font-size: 18px;
+            margin-top: 25px;
+            font-weight: 400;
+        }
+
+        .year-badge {
+            display: inline-block;
+            padding: 7px 25px;
+            margin-top: 12px;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 30px;
+            font-weight: 700;
+        }
+
+
+        /* SECTION HEADINGS */
+
+        .schedule-heading {
+            text-align: center;
+            margin: 55px 0 25px;
+        }
+
+        .schedule-heading h2 {
+            color: var(--navy);
+            font-family: 'Cinzel', serif;
+            font-size: clamp(21px, 3vw, 29px);
+        }
+
+        .schedule-heading p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* CARD GRID */
+
+        .mass-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+
+        /* MASS CARDS */
+
+        .mass-card {
+            position: relative;
+            padding: 23px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(16, 24, 32, 0.06);
+            transition: all 0.35s ease;
+            overflow: hidden;
+        }
+
+        .mass-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .mass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(16, 24, 32, 0.12);
+            border-color: var(--gold);
+        }
+
+        .mass-card h3 {
+            color: var(--navy);
+            font-size: 17px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .mass-card p {
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 7px 0;
+            color: var(--muted);
+        }
+
+        .mass-card strong {
+            color: var(--navy);
+        }
+
+
+        /* SPECIAL CARDS */
+
+        .special-card {
+            background: #fff8e9;
+            border-color: var(--gold);
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, #fff, #fff8e9);
+        }
+
+        .full-card {
+            margin-top: 15px;
+        }
+
+
+        /* ONLINE MASS */
+
+        .online-mass-banner {
+            text-align: center;
+            margin-top: 65px;
+            padding: 40px 20px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, #101820, #344b58);
+            color: white;
+            border: 1px solid var(--gold);
+        }
+
+        .online-mass-banner span {
+            color: var(--gold);
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .online-mass-banner h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--light-gold);
+            margin: 15px 0;
+        }
+
+        .online-mass-banner p {
+            font-size: 13px;
+            color: #eee;
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 600px) {
+
+            .mass-schedule-section {
+                padding: 30px 15px;
+            }
+
+            .mass-header {
+                padding: 35px 15px;
+            }
+
+            .mass-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .mass-card {
+                padding: 20px;
+            }
+
+            .schedule-heading {
+                margin-top: 40px;
+            }
+
+        }
+    </style>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <h3>ST. LOURDES MARY CHURCH</h3>
+
+        <p>
+            Punnai Nagar, Nagercoil
+        </p>
+
+        <p>
+            <span class="footer-gold">✝</span>
+            &nbsp; Faith • Unity • Service
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        /* PARISH ORGANISATION DATA */
+
+        const scheduleData = [
+
+            { no: "1", name: "Parish Council", week: "2nd", day: "Sunday", time: "6:00 PM", place: "Auditorium" },
+
+            { no: "2", name: "Finance Committee", week: "2nd", day: "Saturday", time: "7:00 PM", place: "Office" },
+
+            { no: "3", name: "Audit Committee", week: "2nd", day: "Saturday", time: "7:00 PM", place: "Office" },
+
+            { no: "4", name: "Catechism", week: "4th", day: "Sunday", time: "10:45 AM", place: "Church Campus" },
+
+            { no: "5", name: "Anbiam Coordination", week: "3rd", day: "Sunday", time: "6:00 PM", place: "Auditorium" },
+
+            { no: "6", name: "Liturgy Committee", week: "Every Week", day: "Tuesday", time: "6:30 PM", place: "Church" },
+
+            { no: "7", name: "Altar Servers", week: "3rd", day: "Sunday", time: "6:00 PM", place: "Church" },
+
+            { no: "8", name: "Church Workers", week: "3rd", day: "Sunday", time: "6:00 PM", place: "Church" },
+
+            { no: "9", name: "Choir Group", week: "4th", day: "Saturday", time: "6:00 PM", place: "Office" },
+
+            { no: "10", name: "Convent", week: "2nd", day: "Monday", time: "7:00 PM", place: "Convent" },
+
+            { no: "11", name: "Education and Health Committee", week: "3rd", day: "Wednesday", time: "7:00 PM", place: "Church Campus" },
+
+            { no: "12", name: "Children's Ministry Committee", week: "Every Week", day: "Sunday", time: "8:45 AM", place: "Church Campus" },
+
+            { no: "13", name: "Young Students' Ministry Committee", week: "Every Week", day: "Sunday", time: "9:00 AM", place: "Auditorium" },
+
+            { no: "14", name: "Youth Ministry Committee – Boys", week: "Every Week", day: "Sunday", time: "9:00 AM", place: "Auditorium" },
+
+            { no: "15", name: "Youth Ministry Committee – Girls", week: "Every Week", day: "Sunday", time: "9:00 AM", place: "Auditorium" },
+
+            { no: "16", name: "Evangelisation Committee", week: "1st", day: "Saturday", time: "6:40 AM", place: "Church Campus" },
+
+            { no: "17", name: "Family Welfare Committee", week: "1st", day: "Monday", time: "7:20 AM", place: "Church Campus" },
+
+            { no: "18", name: "Apostleship of Prayer Coordination", week: "5th", day: "Sunday", time: "6:00 PM", place: "Auditorium" },
+
+            { no: "19", name: "Teachers' Meeting", week: "2nd & 4th", day: "Monday", time: "3:00 PM", place: "School" },
+
+            { no: "20", name: "Prayer Group", week: "1st", day: "Saturday", time: "6:40 AM", place: "Church Campus" },
+
+            { no: "21", name: "Legion of Mary – Mother of Mercy", week: "Every Week", day: "Sunday", time: "7:20 AM", place: "Church", group: true },
+
+            { no: "", name: "Legion of Mary – Immaculate Mother", week: "Every Week", day: "Sunday", time: "7:20 AM", place: "Church", group: true },
+
+            { no: "", name: "Legion of Mary – Our Lady of Lourdes", week: "Every Week", day: "Sunday", time: "7:20 AM", place: "Church", group: true },
+
+            { no: "", name: "Legion of Mary – Mother of Wealth", week: "Every Week", day: "Sunday", time: "8:30 AM", place: "Auditorium", group: true },
+
+            { no: "", name: "Legion of Mary – Mother of Good Health", week: "Every Week", day: "Sunday", time: "3:00 PM", place: "Church", group: true },
+
+            { no: "", name: "Legion of Mary – Mother of Blessings", week: "Every Week", day: "Monday", time: "3:00 PM", place: "Church", group: true },
+
+            { no: "22", name: "Christian Life Community", week: "Every Week", day: "Saturday", time: "3:00 PM", place: "Auditorium" },
+
+            { no: "23", name: "Village Development Association – Women", week: "Every Week", day: "Wednesday", time: "2:00 PM", place: "Auditorium", group: true },
+
+            { no: "", name: "Village Development Association – Women", week: "Every Week", day: "Wednesday", time: "2:00 PM", place: "Office – Ground Floor", group: true },
+
+            { no: "", name: "Village Development Association – Women", week: "Every Week", day: "Wednesday", time: "5:00 PM", place: "Library – Upstairs", group: true },
+
+            { no: "", name: "Village Development Association – Men", week: "Every Week", day: "Sunday", time: "8:00 AM", place: "Office – Ground Floor", group: true },
+
+            { no: "", name: "Village Development Association – Men", week: "Every Week", day: "Sunday", time: "8:00 AM", place: "Auditorium", group: true },
+
+            { no: "24", name: "Society of St. Vincent de Paul – Men", week: "Every Week", day: "Sunday", time: "9:00 AM", place: "—", group: true },
+
+            { no: "", name: "Society of St. Vincent de Paul – Women", week: "Every Week", day: "Monday", time: "10:30 AM", place: "Office – Ground Floor", group: true },
+
+            { no: "25", name: "Catholic Association", week: "1st", day: "Sunday", time: "6:30 PM", place: "Office – Ground Floor" },
+
+            { no: "26", name: "Sacred Heart Association", week: "1st", day: "Wednesday", time: "7:00 PM", place: "Church" },
+
+            { no: "27", name: "Prison Ministry Committee", future: true },
+
+            { no: "28", name: "Interreligious Dialogue Committee", future: true },
+
+            { no: "29", name: "Christian Unity Committee", future: true },
+
+            { no: "30", name: "Differently Abled Persons Committee", future: true },
+
+            { no: "31", name: "Scheduled Caste Community Committee", future: true },
+
+            { no: "32", name: "St. Devasahayam Spirituality Group", future: true },
+
+            { no: "33", name: "Christian Rights Movement", future: true },
+
+            { no: "34", name: "Women's Committee", future: true },
+
+            { no: "35", name: "Workers' Committee", future: true },
+
+            { no: "36", name: "Social Communication Committee", future: true },
+
+            { no: "37", name: "Biblical Committee", future: true },
+
+            { no: "38", name: "Environmental Committee", future: true },
+
+            { no: "39", name: "Anti-Addiction Welfare Committee", future: true },
+
+            { no: "40", name: "Counselling Committee", future: true },
+
+            { no: "41", name: "Kolping Group", future: true },
+
+            { no: "42", name: "Vocation Promotion Committee", future: true },
+
+            { no: "43", name: "Anbiam 1", week: "Every Week", day: "Saturday", time: "5:00 PM", place: "Viyakula Vilagam", anbiam: true },
+
+            { no: "44", name: "Anbiam 2", week: "Every Week", day: "Saturday", time: "6:00 PM", place: "—", anbiam: true },
+
+            { no: "45", name: "Anbiam 3", week: "Every Week", day: "Saturday", time: "6:00 PM", place: "In Front of Auditorium", anbiam: true },
+
+            { no: "46", name: "Anbiam 4", week: "Every Week", day: "Saturday", time: "6:30 PM", place: "Jude Chapel", anbiam: true },
+
+            { no: "47", name: "Anbiam 5", week: "Every Week", day: "Saturday", time: "5:00 PM", place: "Vasanthi's House", anbiam: true },
+
+            { no: "48", name: "Anbiam 6", week: "Every Week", day: "Saturday", time: "6:30 PM", place: "Albert's House", anbiam: true },
+
+            { no: "49", name: "Anbiam 7", week: "Every Week", day: "Saturday", time: "6:00 PM", place: "Godwin's House", anbiam: true },
+
+            { no: "50", name: "Anbiam 8", week: "Every Week", day: "Saturday", time: "6:00 PM", place: "Church Campus", anbiam: true },
+
+            { no: "51", name: "Anbiam 9", week: "2nd", day: "Saturday", time: "5:00 PM", place: "Jayanthi's House", anbiam: true },
+
+            { no: "52", name: "Anbiam 10", week: "Every Week", day: "Saturday", time: "5:00 PM", place: "Mariathangam's House", anbiam: true },
+
+            { no: "53", name: "Anbiam 11", week: "Every Week", day: "Sunday", time: "4:00 PM", place: "Church Campus", anbiam: true },
+
+            { no: "54", name: "Anbiam 12", week: "Every Week", day: "Saturday", time: "5:30 PM", place: "Flower House", anbiam: true },
+
+            { no: "55", name: "Anbiam 13", week: "Every Week", day: "Saturday", time: "6:00 PM", place: "Gnanapragasam's House", anbiam: true },
+
+            { no: "56", name: "Catholic Seva Sangam", week: "Every Week", day: "Sunday", time: "7:00 PM", place: "In Front of the Chariot" },
+
+            { no: "57", name: "Coordination of All Organisations", week: "Twice", day: "Saturday", time: "7:00 PM", place: "Auditorium" },
+
+            { no: "58", name: "IT Wing for Digital Ministry", week: "Every Day", day: "Daily", time: "6:00 AM", place: "Church" }
+
+        ];
+
+
+        /* RENDER TABLE */
+
+        const scheduleBody = document.getElementById("scheduleBody");
+
+        const searchInput = document.getElementById("searchInput");
+
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        let currentFilter = "all";
+
+
+        function renderSchedule() {
+
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
+            const filteredData = scheduleData.filter(item => {
+
+                const isAnbiam = item.anbiam === true;
+
+                const isFuture = item.future === true;
+
+                let matchesFilter = true;
+
+                if (currentFilter === "2026") {
+                    matchesFilter = !isFuture;
+                }
+
+                if (currentFilter === "2027") {
+                    matchesFilter = isFuture;
+                }
+
+                if (currentFilter === "anbiam") {
+                    matchesFilter = isAnbiam;
+                }
+
+                const searchableText = [
+                    item.no,
+                    item.name,
+                    item.week,
+                    item.day,
+                    item.time,
+                    item.place
+                ].join(" ").toLowerCase();
+
+                const matchesSearch = searchableText.includes(searchTerm);
+
+                return matchesFilter && matchesSearch;
+
+            });
+
+
+            scheduleBody.innerHTML = "";
+
+            filteredData.forEach(item => {
+
+                const row = document.createElement("tr");
+
+                if (item.group) {
+                    row.classList.add("group-row");
+                }
+
+                if (item.future) {
+
+                    row.innerHTML = `
+                        <td>${item.no}</td>
+                        <td class="organisation-name">${item.name}</td>
+                        <td colspan="3">
+                            <span class="future-badge">FROM 2027</span>
+                        </td>
+                        <td></td>
+                    `;
+
+                } else {
+
+                    row.innerHTML = `
+                        <td>${item.no}</td>
+                        <td class="organisation-name">${item.name}</td>
+                        <td>
+                            <span class="day-badge">${item.week}</span>
+                        </td>
+                        <td>${item.day}</td>
+                        <td class="time-text">${item.time}</td>
+                        <td class="location-text">${item.place || "—"}</td>
+                    `;
+
+                }
+
+                scheduleBody.appendChild(row);
+
+            });
+
+
+            emptyMessage.style.display =
+                filteredData.length === 0 ? "block" : "none";
+
+        }
+
+
+        /* SEARCH */
+
+        searchInput.addEventListener("input", renderSchedule);
+
+
+        /* FILTER BUTTONS */
+
+        document.querySelectorAll(".filter-btn").forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                document.querySelectorAll(".filter-btn").forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                this.classList.add("active");
+
+                currentFilter = this.dataset.filter;
+
+                renderSchedule();
+
+            });
+
+        });
+
+
+        /* MOBILE NAVBAR */
+
+        const menuToggle = document.getElementById("menuToggle");
+
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen = navLinks.classList.toggle("show");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.innerHTML = isOpen ? "×" : "☰";
+
+        });
+
+
+        /* CLOSE MOBILE MENU AFTER CLICK */
+
+        navLinks.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("show");
+
+                menuToggle.innerHTML = "☰";
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+            });
+
+        });
+
+
+        /* SCROLL REVEAL */
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.12
+            });
+
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
+            });
+
+        } else {
+
+            revealElements.forEach(element => {
+                element.classList.add("active");
+            });
+
+        }
+
+
+        /* INITIAL TABLE LOAD */
+
+        renderSchedule();
+
+    </script>
+
+</body>
+
+</html>
