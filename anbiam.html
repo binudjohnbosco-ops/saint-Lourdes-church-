@@ -5,29 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>St. Lourdes Mary Church | Punnai Nagar</title>
+    <title>Church of Our Lady of Lourdes | Punnai Nagar</title>
 
-    <meta name="description" content="Official website of St. Lourdes Mary Church, Punnai Nagar, Nagercoil.">
+    <meta name="description"
+        content="Official website of Church of Our Lady of Lourdes, Punnai Nagar, Nagercoil. Discover our parish, Holy Mass timings, prayers and church information.">
 
-    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* ROOT VARIABLES */
-
         :root {
             --navy: #101820;
             --gold: #d6ad65;
             --light-gold: #f4dfb0;
             --cream: #fffaf0;
-            --ivory: #f8f3e8;
-            --white: #ffffff;
-            --text: #333333;
+            --text: #333;
         }
 
         * {
@@ -46,7 +44,6 @@
             background: var(--cream);
             color: var(--text);
         }
-
 
         /* NAVBAR */
 
@@ -122,52 +119,30 @@
             filter: invert(1);
         }
 
-
-        /* HERO SECTION */
+        /* HERO */
 
         .hero {
-            position: relative;
             min-height: 570px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 65px 20px;
-            overflow: hidden;
-            isolation: isolate;
-        }
 
-        /* BACKGROUND VIDEO */
-
-        .hero-video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            z-index: -2;
-        }
-
-        /* VIDEO OVERLAY */
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg,
+            background:
+                linear-gradient(90deg,
                     rgba(20, 15, 10, 0.68),
                     rgba(255, 255, 255, 0.12),
-                    rgba(20, 15, 10, 0.55));
-            z-index: -1;
+                    rgba(20, 15, 10, 0.55)),
+                url('./poater.jpg');
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
-        /* HERO CONTENT */
-
         .hero-content {
-            position: relative;
-            width: 100%;
             max-width: 950px;
-            color: white;
             animation: appear 1.3s ease;
         }
 
@@ -226,14 +201,11 @@
             color: #17130d;
         }
 
-
-        /* COMMON SECTION HEADINGS */
+        /* COMMON SECTIONS */
 
         .section-heading {
             text-align: center;
             margin-bottom: 40px;
-            padding: 45px 15px;
-            animation: headingReveal 1.3s ease-out both;
         }
 
         .section-subtitle {
@@ -260,14 +232,12 @@
             line-height: 2;
         }
 
-
-        /* WELCOME SECTION */
+        /* WELCOME */
 
         .welcome-section {
             padding: 85px 20px;
             text-align: center;
         }
-
 
         /* FEATURE CARDS */
 
@@ -308,7 +278,6 @@
             color: #777;
             line-height: 1.9;
         }
-
 
         /* CHURCH INFORMATION */
 
@@ -404,7 +373,6 @@
             margin-top: 25px;
         }
 
-
         /* MAP */
 
         .map-section {
@@ -421,7 +389,6 @@
             margin-top: 25px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
-
 
         /* QUOTE */
 
@@ -443,7 +410,6 @@
             font-size: 15px;
             color: #ddd;
         }
-
 
         /* FOOTER */
 
@@ -471,111 +437,14 @@
             color: var(--gold);
         }
 
-
-        /* MAIN BANNER */
-
-        .banner {
-            position: relative;
-            width: 100%;
-            min-height: 430px;
-            background-image: url("./church bg.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            isolation: isolate;
-        }
-
-        .banner-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg,
-                    rgba(5, 12, 25, 0.78),
-                    rgba(15, 20, 35, 0.38),
-                    rgba(5, 12, 25, 0.78));
-            z-index: -1;
-        }
-
-        .banner-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 35px 20px;
-            color: white;
-            animation: bannerReveal 1.4s ease forwards;
-        }
-
-        .logo-frame {
-            width: 145px;
-            height: 145px;
-            margin: 0 auto 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid rgba(255, 215, 130, 0.9);
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.13);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 0 25px rgba(255, 200, 100, 0.35);
-            animation: logoFloat 4s ease-in-out infinite;
-        }
-
-        .front-img {
-            width: 115px;
-            height: 115px;
-            object-fit: contain;
-            border-radius: 50%;
-        }
-
-        .banner h1 {
-            font-family: Georgia, serif;
-            font-size: clamp(25px, 4vw, 45px);
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin: 0 0 12px;
-            color: #fff4d6;
-            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
-        }
-
-        .banner p {
-            font-size: 14px;
-            letter-spacing: 4px;
-            color: #ffda91;
-            font-weight: 600;
-        }
-
-        .banner-subtitle {
-            font-family: Georgia, serif;
-            font-size: 17px;
-            font-style: italic;
-            color: #fff5df;
-            letter-spacing: 1px;
-        }
-
-        .banner-shine {
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(110deg,
-                    transparent,
-                    rgba(255, 255, 255, 0.12),
-                    transparent);
-            transform: skewX(-20deg);
-            animation: shine 7s infinite;
-        }
-
+        /* ANIMATIONS */
 
         /* ANIMATIONS */
 
         @keyframes appear {
             from {
                 opacity: 0;
-                transform: translateY(35px);
+                transform: translateY(25px);
             }
 
             to {
@@ -583,86 +452,168 @@
                 transform: translateY(0);
             }
         }
-
-        @keyframes headingReveal {
-            from {
-                opacity: 0;
-                transform: translateY(35px);
-                filter: blur(6px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-                filter: blur(0);
-            }
-        }
-
-        @keyframes bannerReveal {
-            from {
-                opacity: 0;
-                transform: translateY(35px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes logoFloat {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-9px);
-            }
-        }
-
-        @keyframes shine {
-            0% {
-                left: -100%;
-            }
-
-            40%,
-            100% {
-                left: 150%;
-            }
-        }
-
-
-        /* SCROLL REVEAL */
 
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+            transform: translateY(35px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .reveal.show {
+        .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
+        /* HISTORY TIMELINE */
 
-        /* RESPONSIVE */
+        .history-section {
+            padding: 85px 20px;
+            background: var(--cream);
+        }
+
+        .history-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .history-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 55px;
+        }
+
+        .history-intro h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--navy);
+            font-size: clamp(25px, 4vw, 36px);
+            margin-bottom: 20px;
+        }
+
+        .history-intro p {
+            color: #666;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        .history-timeline {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+            padding: 10px 0;
+        }
+
+        .history-timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #d6ad65;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 35px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 28px;
+            border: 1px solid #ead9b8;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.09);
+        }
+
+        .timeline-content h3 {
+            font-family: 'Cinzel', serif;
+            color: #a47a36;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 35px;
+            width: 17px;
+            height: 17px;
+            background: var(--gold);
+            border: 4px solid var(--cream);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -8px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -8px;
+        }
+
+        /* HISTORY SUMMARY */
+
+        .history-summary {
+            max-width: 950px;
+            margin: 60px auto 0;
+            padding: 45px 30px;
+            text-align: center;
+            background: #f3ead8;
+            border: 1px solid #ead9b8;
+            border-radius: 18px;
+        }
+
+        .history-summary .cross {
+            color: #b68a43;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .history-summary h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--navy);
+            font-size: clamp(23px, 4vw, 32px);
+            margin-bottom: 20px;
+        }
+
+        .history-summary p {
+            max-width: 750px;
+            margin: auto;
+            color: #66583f;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        /* RESPONSIVE DESIGN */
 
         @media (max-width: 991px) {
-
             .custom-navbar {
                 padding: 10px 4%;
-            }
-
-            .navbar-brand img {
-                height: 55px;
-                width: 55px;
-            }
-
-            .brand-name {
-                font-size: 13px;
             }
 
             .navbar-nav {
@@ -670,16 +621,19 @@
                 padding: 15px 0;
             }
 
+            .navbar-nav .nav-link {
+                margin: 7px 0;
+            }
+
             .hero {
                 min-height: 480px;
             }
         }
 
-        @media (max-width: 600px) {
-
+        @media (max-width: 768px) {
             .hero {
                 min-height: 450px;
-                padding: 40px 12px;
+                padding: 55px 18px;
             }
 
             .hero-small {
@@ -692,57 +646,69 @@
             }
 
             .welcome-section,
+            .history-section,
             .church-information {
-                padding: 55px 18px;
+                padding: 60px 18px;
             }
 
-            .church-card {
-                padding: 22px;
+            .features,
+            .map-section {
+                padding: 60px 18px;
+            }
+
+            .history-timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                width: 100%;
+                left: 0;
+                padding: 15px 10px 15px 38px;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 2px;
+                right: auto;
+            }
+
+            .timeline-content {
+                padding: 23px;
+            }
+
+            .history-summary {
+                padding: 35px 20px;
             }
 
             .map-frame {
                 height: 300px;
             }
+        }
 
-            .banner {
-                min-height: 350px;
+        @media (max-width: 480px) {
+            .navbar-brand img {
+                width: 52px;
+                height: 52px;
             }
 
-            .logo-frame {
-                width: 115px;
-                height: 115px;
+            .brand-name {
+                font-size: 13px;
             }
 
-            .front-img {
-                width: 90px;
-                height: 90px;
+            .hero {
+                min-height: 400px;
             }
 
-            .banner h1 {
-                font-size: 25px;
-                letter-spacing: 1px;
+            .feature-card,
+            .church-card {
+                padding: 25px 18px;
             }
 
-            .banner p {
-                font-size: 11px;
-                letter-spacing: 2px;
-            }
-
-            .banner-subtitle {
-                font-size: 14px;
-            }
-
-            .section-heading {
-                padding: 30px 12px;
-            }
-
-            .section-subtitle {
-                font-size: 12px;
-                letter-spacing: 3px;
-            }
-
-            .section-description {
-                font-size: 14px;
+            .church-button {
+                padding: 11px 18px;
             }
         }
 
@@ -755,61 +721,72 @@
                 animation-duration: 0.01ms !important;
                 transition-duration: 0.01ms !important;
             }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
         }
     </style>
 </head>
 
-
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
 
         <div class="container-fluid">
 
             <a class="navbar-brand" href="home.html">
-                <img src="./icon.png" alt="Church Logo">
-                <span class="brand-name">ST. LOURDES MARY CHURCH</span>
+
+                <img src="./og_logo-removebg-preview.png" alt="Church of Our Lady of Lourdes Logo">
+
+                <span class="brand-name">
+                    OUR LADY OF LOURDES
+                </span>
+
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#churchNavbar"
+                aria-controls="churchNavbar" aria-expanded="false" aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon"></span>
 
             </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="collapse navbar-collapse" id="churchNavbar">
 
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
+                        <a class="nav-link" href="home.html">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="history.html">History</a>
+                        <a class="nav-link" href="history.html" aria-current="page">History</a>
                     </li>
+
 
                     <li class="nav-item">
                         <a class="nav-link" href="mass.html">Holy Mass</a>
                     </li>
 
+
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="info.html">Information</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="anbiam.html">Anbiam</a>
+                        <a class="nav-link active" href="anbiam.html">Anbiam</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="pg.html">Photo Gallery</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="coir.html">Choir Group</a>
+                        <a class="nav-link" href="coir.html">Coir Group</a>
                     </li>
 
                     <li class="nav-item">
@@ -824,82 +801,28 @@
 
     </nav>
 
-
-    <!-- HERO SECTION WITH VIDEO -->
-
-    <section class="hero" id="home">
-
-        <video class="hero-video" autoplay muted loop playsinline preload="auto">
-
-            <source src="./church video.mp4" type="video/mp4">
-
-            Your browser does not support HTML5 video.
-
-        </video>
-
-        <div class="hero-overlay"></div>
+    <header class="hero">
 
         <div class="hero-content">
 
             <p class="hero-small">
-                Welcome to Our Parish
+                Church of Our Lady of Lourdes
             </p>
 
             <h1>
-                St. Lourdes <span>Mary Church</span>
+                Our city <span>Anbiam</span>
             </h1>
 
             <div class="gold-line"></div>
 
             <p class="hero-description">
-                Our Lady of Lourdes Church, Punnai Nagar, Nagercoil.
-                A place of faith, prayer, love and devotion.
+
             </p>
 
-            <a href="history.html" class="hero-btn">
-                Discover Our Church
+            <a href="#history" class="hero-btn">
+                Explore Our Anbiam
             </a>
 
         </div>
 
-    </section>
-
-
-    <!-- BOOTSTRAP JAVASCRIPT -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- SCROLL REVEAL JAVASCRIPT -->
-
-    <script>
-
-        const revealObserver = new IntersectionObserver((entries) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("show");
-
-                    revealObserver.unobserve(entry.target);
-
-                }
-
-            });
-
-        }, {
-            threshold: 0.12
-        });
-
-        document.querySelectorAll(".reveal").forEach(element => {
-
-            revealObserver.observe(element);
-
-        });
-
-    </script>
-
-</body>
-
-</html>
+    </header>
